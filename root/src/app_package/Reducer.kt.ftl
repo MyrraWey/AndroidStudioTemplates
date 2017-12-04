@@ -12,6 +12,8 @@ class ${className}Reducer : Reducer<${className}.State> {
 
 	private fun reduce(oldState: ${className}.State, action: ${className}Action): ${className}.State =
 			when (action) {
+			<#if addStub>
 				is ${className}Action.LoadData -> oldState.copy(processing = true)
+			</#if>
 			}
 }

@@ -13,6 +13,13 @@
         constraints="class|unique|nonempty"
         help="The name of the Redux classes"/>
 
+    <parameter
+        id="addStub"
+        name="Add stubs to the classes for awoiding of errors"
+        type="boolean"
+        default="true"
+        help="If true, stub code will be added to the classes. Otherwise, generated classes will contain errors." /> 
+
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 

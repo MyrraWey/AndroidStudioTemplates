@@ -8,6 +8,7 @@ class ${className}Presenter(private val model: ${className}.Model) :
 		${className}.Presenter {
 
 	override fun onStart(view: ${className}.View) {
+	<#if addStub>
 		intent(model
 				.property { state -> state.processing }
 				.subscribe(view.displayProgress.asConsumer()))
@@ -15,5 +16,6 @@ class ${className}Presenter(private val model: ${className}.Model) :
 		intent(view
 				.onLoadData
 				.subscribe(model.loadData.asConsumer()))
+	</#if>
 	}
 }

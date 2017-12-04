@@ -1,0 +1,19 @@
+<template 
+    format="4"
+    revision="1"
+    name="Redux"
+    description="Create classes for Redux">
+
+    <category value="Other"/>
+
+    <parameter 
+        id="className"
+        name="Class Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        help="The name of the Redux classes"/>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
